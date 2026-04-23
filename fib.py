@@ -4,14 +4,17 @@
 #Definition: Program returns the Fibonacci number at position n.
 
 
-def fib(n)
+def fib(n):
 
     first = 1
     second = 1
 
-    for i in range(n - 2):
-        next_num = first + second
-        first = second
-        second = next_num
+    if n == 1:
+        return 1
 
-    return second
+    for i in range(n - 1):
+        next = first + second
+        first = second
+        second = next
+
+    return first
